@@ -29,15 +29,15 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         Word currentWord = getItem(position);
 
-        TextView Frenchnumbertextview = (TextView) ListItemView.findViewById(R.id.French_Textview);
-        Frenchnumbertextview.setText(currentWord.getFrenchtranslation());
+        TextView Frenchnumbertextview = ListItemView.findViewById(R.id.French_Textview);
+        Frenchnumbertextview.setText(currentWord.getFrenchTranslation());
 
 
-        TextView defaultnumbertextview = (TextView) ListItemView.findViewById(R.id.Default_Textview);
-        defaultnumbertextview.setText(currentWord.getEnglishtranslation());
+        TextView defaultnumbertextview =  ListItemView.findViewById(R.id.Default_Textview);
+        defaultnumbertextview.setText(currentWord.getEnglishTranslation());
 
 
-        ImageView relatedimage = (ImageView) ListItemView.findViewById(R.id.image_area);
+        ImageView relatedimage = ListItemView.findViewById(R.id.image_area);
         if (currentWord.hasImage()) {
             relatedimage.setImageResource(currentWord.getImageResourceId());
             relatedimage.setVisibility(View.VISIBLE);
